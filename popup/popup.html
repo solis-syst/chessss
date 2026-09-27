@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cheezie Engine</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header class="header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">♟</div>
+        <div>
+          <div class="brand-name">CHEEZIE ENGINE</div>
+          <div class="brand-subtitle">Quick controls</div>
+        </div>
+      </div>
+      <div class="status" id="siteStatus">
+        <span class="status-dot"></span>
+        <span id="statusText">Checking page…</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="eyebrow">ANALYZER</span>
+        <h1>Ready to analyze</h1>
+        <p>Use the quick controls here, or open the complete dashboard in a full browser tab.</p>
+      </div>
+      <button class="primary" id="openDashboard">Open full analyzer <span>↗</span></button>
+    </section>
+
+    <section class="card">
+      <div class="card-heading">
+        <div>
+          <span class="label">ENGINE</span>
+          <strong>Analysis engine</strong>
+        </div>
+        <span class="pill" id="enginePill">Komodo</span>
+      </div>
+      <select id="engine">
+        <option value="komodo">Komodo · 3500</option>
+        <option value="maia3">Maia 3 · 2600</option>
+        <option value="stockfish11">Stockfish 11</option>
+        <option value="stockfish6">Stockfish 6</option>
+        <option value="lozza">Lozza</option>
+        <option value="wukong">Wukong JS</option>
+        <option value="None">None</option>
+      </select>
+    </section>
+
+    <section class="card">
+      <div class="card-heading">
+        <div>
+          <span class="label">QUICK SETTINGS</span>
+          <strong>Board & automation</strong>
+        </div>
+      </div>
+
+      <label class="toggle-row">
+        <span><strong>Show arrows</strong><small>Display engine move suggestions</small></span>
+        <span class="switch"><input type="checkbox" id="showArrows"><i></i></span>
+      </label>
+
+      <label class="toggle-row">
+        <span><strong>Evaluation bar</strong><small>Show the live position evaluation</small></span>
+        <span class="switch"><input type="checkbox" id="showEval"><i></i></span>
+      </label>
+
+      <label class="toggle-row">
+        <span><strong>Move classification</strong><small>Classify moves during analysis</small></span>
+        <span class="switch"><input type="checkbox" id="moveClassification"><i></i></span>
+      </label>
+
+      <label class="toggle-row">
+        <span><strong>Auto Move</strong><small>Automatically play the selected engine move</small></span>
+        <span class="switch"><input type="checkbox" id="autoMove"><i></i></span>
+      </label>
+    </section>
+
+    <div class="footer">
+      <button class="secondary" id="reset">Reset settings</button>
+      <span>v1.0.0</span>
+    </div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
